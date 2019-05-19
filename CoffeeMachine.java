@@ -16,29 +16,24 @@ public class CoffeeMachine {
         {
             switch (machine.getMachineStatus()){
                 case IN_MAIN_MENU:
-                    System.out.println("Write an action (buy, fill, take, remaining, exit): ");
-                    machine.action(scanner.next());
+                    System.out.println("Write an action (buy, fill, take, remaining, exit): ")
                     break;
                 case BUY:
                     System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:");
-                    machine.action(scanner.next());
                     break;
                 case WATER:
                     System.out.println("Write how many ml of water do you want to add: ");
-                    machine.action(scanner.next());
                     break;
                 case MILk:
                     System.out.println("Write how many ml of milk do you want to add: ");
-                    machine.action(scanner.next());
                     break;
                 case COFFEE_BEANS:
                     System.out.println("Write how many grams of coffee beans do you want to add: ");
-                    machine.action(scanner.next());
                     break;
                 case DISPOSABLE_CUPS:
                     System.out.println("Write how many disposable cups of coffee do you want to add: ");
-                    machine.action(scanner.next());
             }
+            machine.action(scanner.next());
         }
     }
 }
